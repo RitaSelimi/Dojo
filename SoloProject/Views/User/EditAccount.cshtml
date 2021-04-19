@@ -1,0 +1,102 @@
+@{
+    Layout = "_Layout";
+}
+
+@model RegisterUser
+<style>
+    
+.background-edit { 
+    background: url(../images/h4.jpg) 
+    no-repeat center;
+    background-size: cover; 
+    height: 200px;
+}
+
+</style>
+
+<div class="background-edit main-slider">
+	<div class="table-model">
+ 	</div>
+</div>
+
+<div class="mt-5 mr-5 ml-5">
+    <h3 class="pl-5 ml-3 h4 mb-4 mt-5">Edit Profile</h3>
+    <div class="d-flex mb-5 justify-content-around">
+        <form class="col-sm-5" method="post" asp-action="UpdateUser" asp-controller="User">
+            <div class="border p-4 pb-5">
+                <div class="form-group row">
+                    <span asp-validation-for="FirstName"></span>
+                    <label class="col-sm-4 col-form-label" asp-for="FirstName"></label>
+                    <div class="col-sm-12">
+                        <input class="form-control" asp-for="FirstName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span asp-validation-for="LastName"></span>
+                    <label class="col-sm-4 col-form-label" asp-for="LastName"></label>
+                    <div class="col-sm-12">
+                        <input class="form-control" asp-for="LastName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span asp-validation-for="Email"></span>
+                    <label class="col-sm-4 col-form-label" asp-for="Email"></label>
+                    <div class="col-sm-12">
+                        <input class="form-control" asp-for="Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span asp-validation-for="Address"></span>
+                    <label class="col-sm-4 col-form-label" asp-for="Address"></label>
+                    <div class="col-sm-12">
+                        <input class="form-control" asp-for="Address">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span asp-validation-for="City"></span>
+                    <label class="col-sm-4 col-form-label" asp-for="City"></label>
+                    <div class="col-sm-12">
+                        <input class="form-control" asp-for="City">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span asp-validation-for="State"></span>
+                    <label class="col-sm-4 col-form-label" asp-for="State"></label>
+                    <div class="col-sm-12">
+                        <input class="form-control" asp-for="State">
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-success float-right pl-4 pr-4">Save</button>
+                </div>
+            </div>
+        </form>
+
+        <form class="col-sm-5" method="post" asp-action="UpdatePass" asp-controller="User">
+            <div class="border p-4 pb-5">
+                <div class="form-group row">
+                    <span asp-validation-for="Password"></span>
+                    <label class="col-sm-6 col-form-label" asp-for="Password"></label>
+                    <div class="col-sm-12">
+                        <input class="form-control" asp-for="Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <span asp-validation-for="Confirm"></span>
+                    <label class="col-sm-6 col-form-label" asp-for="Confirm"></label>
+                    <div class="col-sm-12">
+                        <input class="form-control" asp-for="Confirm">
+                    </div>
+                </div>
+                <button class="btn btn-success float-right pl-4 pr-4">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+ 	<iframe class="map"
+		src="https://maps.google.com/maps?q=XhemajlBerisha%2C10000%20Prishtine%2C%20Kosovo&t=&z=13&ie=UTF8&iwloc=&output=embed">
+ 	</iframe>
+</div>

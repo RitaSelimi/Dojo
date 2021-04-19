@@ -1,0 +1,94 @@
+@model OrderModel
+@{
+    Layout = "_Layout";
+}
+
+<style>
+    .background-show {
+        background: url(../images/h2.jpg) no-repeat center;
+        background-size: cover;
+        height: 200px;
+    }
+
+    .showStyle {
+        display: flex;
+        padding: 2% 7%;
+    }
+</style>
+
+<div class="background-show main-slider">
+    <div class="table-model">
+    </div>
+</div>
+<div class="bg-lite-blue">
+    <div class="showStyle">
+        <div class="w-75 pr-5">
+            <h3>Order #@Model.Order.OrderId </h3>
+            <hr>
+            <h5><strong>Total Price:</strong> @Model.Order.TotalPrice €</h5>
+            <h5><strong>Items:</strong></h5>
+            @foreach (var item in @Model.Order.Products)
+            {
+                <p class="ml-2 pr-5">@item.Product.Name ~ <span class="color-primary">@item.Product.Price €</span> <a
+                    class="float-right pr-5" asp-action="Delete" asp-controller="Order"
+                    asp-route-productid="@item.ProductId" asp-route-orderId="@Model.Order.OrderId"><button
+                        class="float-right btn btn-secondary">Remove</button></a></p>
+                <hr>
+            }
+            <form method="post" asp-action="UpdatePrice" asp-controller="Order"
+                asp-route-orderId="@Model.Order.OrderId">
+                <div class="form-group">
+                    <h3>
+                        <input id="check" class="p-2" asp-for="Order.Delivery">
+                        <label class="text-muted p-2 h6" asp-for="Order.Delivery">Add Delivery<span
+                                class="color-primary"> + 2.00 €</span></label>
+                    </h3>
+                </div>
+                <input class="btn-primaryc pl-5 pr-5 border-0 modalInput" type="submit" value="Check Price" />
+            </form>
+            <button class="btn-primaryc secondary pl-5 pr-5 mt-3">@Html.ActionLink("Buy","OrderCheckout","CheckoutApi",new
+                                    {id = @Model.Order.OrderId})</button>
+            @* <div class="row justify-content-center">
+                <button id="myBtn" class="btn-primaryc pl-5 pr-5 border-0"><b>Finish Order<b></button>
+                </div>
+
+                <div id="myModal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <div>
+
+                </div>
+                </div>
+                </div> *@
+        </div>
+        <div class="w-50">
+            <h3>Menu Items</h3>
+            @foreach (var item in Model.ListProducts)
+            {
+                <div class="mb-2">
+                    <h6 class="mt-2">@item.Name
+                        <a asp-controller="Order" asp-action="AddToCart" asp-route-productId="@item.ProductId"
+                        asp-route-orderId="@Model.Order.OrderId"
+                        class="btn-brdr-primary pl-2 pr-2 float-right "><b>Order Now</b></a>
+                    </h6>
+                    <h6 class="mt-2 color-primary"><b>@item.Price €</b></h6>
+                    @{
+                        if (item.Users.Any(r => r.UserId == ViewBag.User))
+                        {
+                            <a asp-controller="Order" asp-action="Favorite" asp-route-productId="@item.ProductId"
+                    asp-route-status="remove" asp-route-orderId="@Model.Order.OrderId" class="text-muted">Remove from
+                                favorites</a>
+                        }
+                        else
+                        {
+                            <a asp-controller="Order" asp-action="Favorite" asp-route-productId="@item.ProductId"
+                    asp-route-status="add" asp-route-orderId="@Model.Order.OrderId" class="text-muted">Add to
+                                favorites</a>
+                        }
+                    }
+                </div>
+                <hr>
+            }
+        </div>
+    </div>
+</div>

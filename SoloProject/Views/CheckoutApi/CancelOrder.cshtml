@@ -1,0 +1,25 @@
+@{
+    Layout = "_Layout";
+}
+<style>
+    .background-edit {
+        background: url(../images/h9.jpg) no-repeat center;
+        background-size: cover;
+        height: 200px;
+    }
+
+    .showStyle {
+        padding: 2% 7%;
+    }
+</style>
+<div class="bg-lite-blue">
+    <div class="background-edit main-slider">
+        <div class="table-model">
+        </div>
+    </div>
+
+    <div class="showStyle">
+        <h1>Order Checkout Failed</h1>
+        <button class="btn btn-light">@Html.ActionLink("Go Back to Orders","AllOrders","Order")</button>
+    </div>
+</div>

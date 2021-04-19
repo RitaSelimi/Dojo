@@ -1,0 +1,462 @@
+.background-home { 
+    background: url(../images/h1.jpg) 
+    no-repeat center;
+    background-size: cover; 
+    height: 600px;
+}
+.background-menu { 
+    background: url(../images/h3.jpg) 
+    no-repeat center;
+    background-size: cover; 
+    height: 600px;
+}
+
+.btn-brdr-primary:hover { 
+    background: #EF0031; 
+    color: #FFFFFF; 
+}
+
+.btn-brdr-primary {
+    text-align: center;
+    height: 45px;
+    line-height: 43px;
+    border: 1px solid #EF0031;
+    color: #EF0031;
+    border-radius: 2px;
+}
+.main-slider{ 
+    position: relative; 
+    z-index: 1; 
+}
+.map{
+    width:100%; height:500px;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+.main-slider:after{
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: -1; 
+    background: rgba(0,0,0,.3); 
+}
+
+.position-relative { 
+    position: relative; 
+    z-index: 1; 
+}
+
+.table-model { 
+    display: table;  
+    height: 100%; 
+    width: 100%;
+}
+
+.display-table-cell {
+    display: table-cell; 
+    vertical-align: middle; 
+    margin-top: 7%;
+}
+
+.heading-img {
+    height: auto;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.background-2 { 
+    background: url(../images/cheese.jpg)
+    no-repeat center;
+    background-size: 100%;
+    width: 15%;
+    position: absolute; 
+    top: 0; 
+    bottom: 30px; 
+    left: 0; 
+    z-index: -1;
+ }
+
+.background-3 {  
+    background: url(../images/tomato.jpg)
+    no-repeat center; 
+    background-size: 100%;
+    width: 15%;
+    position: absolute; 
+    top: 0; 
+    bottom: 30px; 
+    right: 0; 
+    z-index: -1;
+}
+
+.pstyle{
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.pstyle p {
+    width: 350px;
+}
+.btn-primaryc.secondary {
+    background: #118522;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 30px;
+    width: 70%;
+}
+
+#myBtn {
+    height: 56px;
+    width: 250px;
+    color: #fff;
+    background: #EF0031;
+    align-self: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-color: #EF0031;
+}
+
+.fstyle {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.text {
+    position: absolute;
+    bottom: 170px;
+    width: 100%;
+}
+
+.right-area {
+    float: right;
+    bottom: -20;
+    height: 80%;
+    height: 70px;
+    padding-bottom: 30px;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.background-color{ 
+    background: #F4F8F9; 
+    padding: 50px 200px;
+ }
+ 
+.sided-90x { 
+    position: relative; 
+}
+ 
+.sided-90x .s-left { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 90px; 
+    width: 90px; 
+}
+ 
+.sided-90x .s-right { 
+    margin-left: 115px; 
+    min-height: 90px; 
+} 
+ 
+.story-area {
+    position: relative;
+    background: #fff;
+}
+
+.background-seller1{ 
+    background: url(../images/1900x300bg.jpg)  no-repeat; 
+    background-size: cover; 
+    position: relative; 
+    z-index: 1; 
+}
+
+.background-seller1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(0,0,0,.3); 
+}
+
+.font-60{  
+   font-size: 5em !important; 
+}
+
+.background-seller2{ 
+    background: url(../images/Pije.jpg)  no-repeat; 
+    background-size: cover; 
+    position: relative; 
+    z-index: 1; 
+ }
+
+.font-30{  
+    font-size: 3em; 
+}
+
+.background-seller2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(0,0,0,.5); 
+}
+.bg-lite-blue {
+    background: #F4F8F9;
+}
+.sided-220x { 
+    position: relative; 
+}
+
+.sided-220x .s-left { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 220px;
+    width: 220px; 
+}
+
+.sided-220x .s-right { 
+    margin-left: 250px; 
+    min-height: 220px; 
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+img {vertical-align: middle;}
+
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img{
+    height: 600px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.btn-primaryc { 
+    position: relative; 
+    text-align: center; 
+    height: 55px; 
+    line-height: 50px; 
+    background: #EF0031; 
+    color: #fff; 
+    border-radius: 3px; 
+    z-index: 1; 
+}
+
+.btn-primaryc.secondary{ background: #118522; }
+
+.btn-primaryc:after { 
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: 3px; 
+    background: #1F8330; 
+    z-index: -2; 
+    -webkit-transition: all .1s ease-in;    
+    transition: all .1s .1s ease-in; 
+}
+
+.btn-primaryc:before { 
+    content: ''; 
+    position: absolute; 
+    bottom: 3px; 
+    left: 0; 
+    right: 0; 
+    height: 2px; 
+    background: #FFFFFF; 
+    z-index: -1;
+    -webkit-transition: all .1s  .2s ease-in; 
+    transition: all .1s  ease-in; 
+}
+
+.btn-primaryc:hover { color: #111 }
+
+.btn-primaryc:hover:after { height: 100%; }
+
+.btn-primaryc:hover:before { height: 100%;  
+    border: 1px solid #1F8330; }
+
+/* .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 3s;
+} */
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* ---------------------- */
+
+/*Headeri pjesa poshte - foto-ja*/
+.background-1 { 
+    background: url(../images/h2.jpg) 
+    no-repeat center;
+    background-size: cover; 
+    height: 600px;
+}
+
+
+
+/* ---------------------------------------- */
+
+.background-seller{ 
+    background: 
+    url(../images/prapavi.jpg)  no-repeat; 
+    background-size: cover; 
+    position: relative; z-index: 1; 
+}
+
+.background-seller:after{
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: -1; /*hijezimi nuk ndikon te teksti*/
+    background: rgba(0,0,0,.8); 
+}
+
+
+.color-ash {
+    color: #aaa;
+}
+
+
+.pos-relative { 
+  position: relative; 
+  z-index: 1; }
+
+.dplay-tbl-cell {
+  display: table-cell; 
+  vertical-align: middle; 
+}
+
+.color-primary {
+  color: #EF0031;
+}
+
+.swiper-pagination-bullet{ background: #FFFFFF; opacity: 1;  }
+
+.swiper-pagination-bullet-active{ background: #ED0037; }
+
+
+.story-bg {
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      opacity: .6;
+      width: 200px;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+}
+
+.story-bg.left { 
+    left: 0; 
+}
+
+.story-bg.right { 
+    right: 0;
+}
+
+#our-works{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 500px;
+}
+
+.works-img{
+    display: flex;
+    justify-content: center;
+}
+
+.works-box{
+    max-width: 250px;
+    height: 300px;
+    float: left;
+    margin-right: 45px;
+    margin-top: 20px;
+}
+.works-box img{
+    margin-top: 25px;
+    float: left;
+}
+.works-box p{
+    color: #e6e6e6;
+    float: left;
+    line-height: 2;
+}
+
+
+
+
+
+
+
+

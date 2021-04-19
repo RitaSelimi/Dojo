@@ -1,0 +1,275 @@
+@{
+    Layout = "_Layout";
+}
+@model List<ProductUser>
+
+<div class="background-menu main-slider">
+    <div class="h-100">
+        <div class="table-model">
+            <div class="display-table-cell center-text color-white">
+                <h5><b>BEST IN TOWN</b></h5>
+                <h1 class="mt-3">Menu</h1>
+                <h5 class="menu-btn padding-lr-25"><b>Porosit: +383 44 666 111</b></h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background-color">
+    <div>
+        <div>
+            <div>
+                <div class="sided-90x mb-4 ">
+                    <div class="s-left"><img src="~/images/p1.png" alt="Menu Image"></div>
+
+                    <div class="s-right">
+                        <h5 class="mb-1"><b>Margarita Pizza</b><b class="text-danger float-right">4.00 €</b></h5>
+                        <p>Tomato sauce, Mozzarella, Origano</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="sided-90x mb-4 ">
+                    <div class="s-left"><img src="~/images/p2.png" alt="Menu Image"></div>
+
+                    <div class="s-right">
+                        <h5 class="mb-1"><b>Fungi Pizza</b><b class="text-danger float-right">4.50 €</b>
+                        </h5>
+                        <p>Tomato sauce, Mozzarella, Origano,
+                            Mushrooms</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="sided-90x mb-4">
+                    <div class="s-left"><img src="~/images/p3.png" alt="Menu Image"></div>
+
+                    <div class="s-right">
+                        <h5 class="mb-1"><b>Chicago Pizza</b><b class="text-danger float-right">5.00 €</b>
+                        </h5>
+                        <p>Tomato sauce, Mozzarella, Origano,
+                            Mushrooms, Bacon</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="sided-90x mb-4">
+                    <div class="s-left"><img src="~/images/p4.png" alt="Menu Image"></div>
+
+                    <div class="s-right">
+                        <h5 class="mb-1"><b>Mozzarella Pizza</b><b class="text-danger float-right">5.00 €</b>
+                        </h5>
+                        <p>Tomato sauce, Mozzarella, Cheese</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="sided-90x mb-4">
+                    <div class="s-left"><img src="~/images/p5.png" alt="Menu Image"></div>
+
+                    <div class="s-right">
+                        <h5 class="mb-1"><b>Tuna Pizza</b><b class="text-danger float-right">5.50 €</b>
+                        </h5>
+                        <p>Tomato sauce, Mozzarella, Origano,
+                            Tuna, Olives</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="sided-90x mb-4 ">
+                    <div class="s-left"><img src="~/images/p6.png" alt="Menu Image"></div>
+
+                    <div class="s-right">
+                        <h5 class="mb-1"><b>Sicilian Pizza</b><b class="text-danger float-right">5.00 €</b>
+                        </h5>
+                        <p>Tomato sauce, Mozzarella, Origano,
+                            Mushrooms, Bacon</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="sided-90x mb-4">
+                    <div class="s-left"><img src="~/images/p1.png" alt="Menu Image"></div>
+
+                    <div class="s-right">
+                        <h5 class="mb-1"><b>Greek Pizza</b><b class="text-danger float-right">5.00 €</b>
+                        </h5>
+                        <p>Tomato sauce, Mozzarella, Cheese</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="sided-90x mb-4 ">
+                    <div class="s-left"><img src="~/images/p3.png" alt="Menu Image"></div>
+
+                    <div class="s-right">
+                        <h5 class="mb-1"><b>X Pizza</b><b class="text-danger float-right">6.00 €</b>
+                        </h5>
+                        <p>Tomato sauce, Mozzarella, Origano,
+                            Mushrooms, Bacon, Tomato, Olice</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="story-area background-seller1 color-white position-relative">
+    <h3 class="font-60 font-s-40 center-text">Your Favorites</h3>
+</section>
+
+<div>
+
+    <div class="center-text position-relative p-5 mr-5 ml-5">
+    <div class="background-2 ml-5 pl-5"></div>
+    <div class="mr-5"><div class="background-3 mr-5 pr-5"></div></div>
+
+        @foreach (var item in Model)
+        {
+            <div class="mb-3 center-text">
+                <h5>@item.Product.Name ~ <b class="text-danger">@item.Product.Price €</b></h5>
+            </div>
+        }
+        @* <div>
+            <div class="sided-220x mb-4 ">
+            <div class="s-left "><img src="~/images/p7.png" alt="Menu Image"></div>
+            <div class="s-right">
+            <h5>Mozzarella Pizza</h5>
+            <h4><b class="text-danger">3.50 €</b>
+            </h4>
+            <p>Salce domatesh, Mozarela, Origano, Kerpudha, Proshute, Ullinj </p>
+            </div>
+
+            </div>
+            </div>
+
+            <div>
+            <div class="sided-220x mb-4 ">
+            <div class="s-left "><img src="~/images/p8.png" alt="Menu Image"></div>
+            <div class="s-right">
+            <h5>Tuna Pizza</h5>
+            <h4><b class="text-danger">4.50 €</b>
+            </h4>
+            <p>Tomato sauce, Mozzarella, Origano,
+            Tuna, Olives</p>
+            </div>
+
+            </div>
+            </div> *@
+    </div>
+</div>
+
+<section class="story-area background-seller2 color-white position-relative">
+    <h4 class="font-30 font-s-20 center-text margin-b-25"><i>Add a refreshing <b>Drink</b>!!!</i></h4>
+</section>
+
+<div>
+    <div class="background-color bg-white">
+        <div>
+            <div class="sided-90x mb-4">
+                <div class="s-left"><img src="~/images/w.png" alt="Menu Image"></div>
+
+                <div class="s-right">
+                    <h5 class="mb-1"><b>Water</b><b class="text-danger float-right">0.50 €</b>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="sided-90x mb-4 ">
+                <div class="s-left"><img src="~/images/c.jpg" alt="Menu Image"></div>
+
+                <div class="s-right">
+                    <h5 class="mb-1"><b>Caffe</b><b class="text-danger float-right">1.00 €</b>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="sided-90x mb-4">
+                <div class="s-left"><img src="~/images/cc.jpg" alt="Menu Image"></div>
+
+                <div class="s-right">
+                    <h5 class="mb-1"><b>Coca-Cola</b><b class="text-danger float-right">1.00 €</b>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="sided-90x mb-4 ">
+                <div class="s-left"><img src="~/images/f.jpg" alt="Menu Image"></div>
+                <div class="s-right">
+                    <h5 class="mb-1"><b>Ace</b><b class="text-danger float-right">1.00 €</b>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="sided-90x mb-4">
+                <div class="s-left"><img src="~/images/o.jpg" alt="Menu Image"></div>
+
+                <div class="s-right">
+                    <h5 class="mb-1"><b>Orange juice</b><b class="text-danger float-right">2.00 €</b>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="sided-90x mb-4 ">
+                <div class="s-left"><img src="~/images/s.jpg" alt="Menu Image"></div>
+
+                <div class="s-right">
+                    <h5 class="mb-1"><b>Pomegranate juice</b><b class="text-danger float-right">2.00 €</b>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div class="sided-90x mb-4">
+                <div class="s-left"><img src="~/images/rw.jpg" alt="Menu Image"></div>
+
+                <div class="s-right">
+                    <h5 class="mb-1"><b>Red or white wine</b><b class="text-danger float-right">2.50 €</b>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="sided-90x mb-4 ">
+                <div class="s-left"><img src="~/images/b.jpg" alt="Menu Image"></div>
+
+                <div class="s-right">
+                    <h5 class="mb-1"><b>Corona</b><b class="text-danger float-right">3.00 €</b>
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

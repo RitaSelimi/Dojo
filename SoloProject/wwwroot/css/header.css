@@ -1,0 +1,203 @@
+.container{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1000;
+    padding: 10px 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: #000;
+    z-index: -1;
+    opacity: .5;
+}
+
+header .logo {
+    float: left;
+    height: 70px;
+}
+
+header .logo img {
+    height: 100%;
+    width: auto;
+}
+
+.menu {
+    margin: 0 30px 0 0;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color:white;
+    margin: 0 10px;
+    line-height: 70px;
+}
+
+/*Header - padding brrenda box-it*/
+.padding-lr-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+}
+
+.color-white {
+    color: #fff;
+}
+
+footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: #000;
+    z-index: -1;
+    opacity: .6;
+}
+
+.footer-padding {
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+
+footer{ 
+    background: url("../images/footer.jpg") no-repeat; 
+    background-size: cover; 
+    height: 10%; 
+    position: relative;  
+    text-align: center;
+    z-index: 1;  
+    font-size: 1.3em; 
+}
+
+footer,footer p{ 
+    color: #FFFFFF; 
+}
+
+#logo-f-size{
+    width: 50px;        
+}
+
+body { 
+    font-family: 'Open Sans', sans-serif; 
+}
+
+h1, h2, h5{
+    line-height: 1.5; 
+    font-weight: inherit;
+}
+
+h1, h2, h3, .font-beyond {
+    font-family: 'beyond_the_mountainsregular', sans-serif;
+}
+
+.underline-secondary {
+    color: #37B143;
+    text-decoration: underline;
+}
+
+p { 
+    line-height: 1.7;
+    color: #555; 
+}
+
+h1 { 
+    font-size: 7.5em; 
+    line-height: 1.4; 
+}
+
+h2 { 
+    font-size: 4em; 
+    line-height: 1.4; 
+}
+
+h5 { 
+    font-size: 1.3em; 
+}
+
+a{ 
+    display: inline-block; 
+    text-decoration: none; 
+    color: inherit; 
+    line-height: 1.5; 
+    -webkit-transition: all .25s ease-in-out; 
+    transition: all .25s ease-in-out;
+}
+
+a:focus, a:active, a:hover,
+a b.light-color:hover { 
+    text-decoration: none; 
+    color: orange;
+}
+
+b {  
+    font-weight: 700; 
+}
+
+img { 
+    width: 100%;
+}
+
+li { 
+    list-style: none; 
+    display: inline-block; 
+    line-height: 2; 
+    font-size: 1.1em; 
+}
+
+b.max-bold { 
+    font-weight: 700; 
+}
+
+section {
+    padding: 100px 0 70px;
+}
+
+/*Ndikon ne largesine mes elementeve ne hapsiren pas heading-ut*/
+.heading {
+    position: relative;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+.radial-prog-area{ padding: 20px; max-width: 250px; margin: 0 auto; text-align: center; }
+
+.radial-progress{ position: relative; }
+
+.radial-progress .progressbar-text{ font-size: 2.5em; font-weight: 500; color: #000!important; }
+
+.radial-progress .progressbar-text:after{ content:'%'; }
+
+.radial-progress .progress-title{ font-family: 'Open Sans', sans-serif;  position: absolute; top: 50%; left: 50%;transform: translate(-50%, 30px); color: #777; }
+
+/* style per teskt */
+.text {
+    position: absolute;
+    bottom: 170px;
+    width: 100%;
+}
+
+.center-text{ 
+    text-align: center; 
+}
+.work-img-s{
+    width: 25%;
+}

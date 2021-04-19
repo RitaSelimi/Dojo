@@ -1,0 +1,42 @@
+@model LoginUser
+@{
+    Layout = "_LayoutAccess";
+}
+
+<div>
+    <div class="main mt-5 pb-3">
+        <div class="imgcontainer">
+            <img src="images/Llogo_1.png" style="width: 200px; float: center; padding-bottom:20px;" class="avatar">
+        </div>
+        <form asp-action="Login2" asp-controller="Access" method="post" class="login-form">
+            <div class="form-group">
+                <label asp-for="LoginEmail" class="mb-2"></label>
+                <input class="form-control rounded-left" asp-for="LoginEmail">
+                <span class="text-danger small" asp-validation-for="LoginEmail"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LoginPassword" class="mb-2"></label>
+                <input class="form-control rounded-left" asp-for="LoginPassword">
+                <span class="text-danger small" asp-validation-for="LoginPassword"></span>
+            </div>
+            <div class="form-group d-md-flex">
+                <div class="w-50">
+                    <label class="checkbox-wrap checkbox-primary">Remember Me
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="w-50 text-md-right">
+                    <a href="#">Forgot Password</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="button" value="Login">
+            </div>
+        </form>
+        <div class="text-center">
+            <p class="mb-2"> Don't have an account? </p>
+            <p><a asp-controller="Access" asp-action="Register" class="mb-5">Singup</a></p>
+        </div>
+    </div>
+</div>

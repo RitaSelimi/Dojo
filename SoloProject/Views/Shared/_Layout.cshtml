@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SoloProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="~/fonts/beyond_the_mountains-webfont.css" type="text/css" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+        
+    <link rel="stylesheet" type="text/css" href="~/css/home.css">
+    <link href="~/css/header.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="ml-5 pl-5">
+            <a class="logo" href="Home.php"><img src="~/images/Llogo_2.png" alt="Logo"></a>
+        
+            <div class="menu main-menu font-mountainsre">
+                <a class="float-left ml-5 pl-5" asp-controller="Home" asp-action="AboutUs">ABOUT US</a>
+                <a class="float-left" asp-controller="Home" asp-action="Menu">MENU</a>
+                <a class="float-left" asp-controller="Order" asp-action="AllOrders">ORDER</a>
+                <a class="float-left" asp-controller="User" asp-action="EditAccount">PROFILE</a>
+
+                <a asp-area="" asp-controller="Access" asp-action="Logout" class="float-right mr-5 pr-5">Logout</a>
+            </div>
+        </div>
+    </header> 
+
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer-padding position-relative">
+        <div class="pos-top triange-bottom"></div>
+        <div class="container-fluid">
+            <a href="Home.php" id="logo-f-size"><img src="~/images/Llogo_3.png" alt="Logo"></a>
+            <div class="pt-4">
+                <p class="mb-2 underline-secondary"><b>Address:</b></p>
+                <a target="_blank">Velani, Xhemail Berisha, Prishtine, 10000</a>
+            </div>
+            <div class="pt-4">
+                <p class="mb-2 underline-secondary"><b>Phone:</b></p>
+                <a href="tel:+383 45 223 423">+383 45 223 423</a>
+            </div>
+            <div class="pt-4">
+                <p class="mb-2 underline-secondary"><b>Email:</b></p>
+                <a href="mailto:xPizza@gmail.com">xpizza@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/scripts.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

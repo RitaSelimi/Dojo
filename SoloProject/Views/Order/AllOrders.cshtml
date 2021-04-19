@@ -1,0 +1,140 @@
+@model OrderModel
+@{
+    Layout = "_Layout";
+}
+
+
+<style>
+    .background-edit {
+        background: url(../images/h10.png) no-repeat center;
+        background-size: cover;
+        height: 200px;
+    }
+
+    .showStyle {
+        padding: 4% 10%;
+    }
+    a{
+        text-decoration: underline;
+    }
+</style>
+
+<div class="background-edit main-slider">
+    <div class="table-model">
+    </div>
+</div>
+
+<div class="showStyle bg-lite-blue">
+    <div>
+        <form method="post" asp-action="CreateOrder" asp-controller="Order">
+            <h5><input class="btn-primaryc pl-5 pr-5 border-0" type="submit" value="Start a new Order!"></h5>
+        </form>
+        <h3 class="mt-5">All Orders</h3>
+        <div class="row">
+            @for(int i = 0; i < Model.ListOrders.Count; i++)
+            {
+                if (@Model.ListOrders[i].CustomerId == @ViewBag.User)
+                {
+                    if(i == 0){
+                        <div class="ml-2 mr-5 mb-4 p-3 bg-white shadow-sm rounded" style="width: 100%;">
+                            <h5 class="mt-2 mr-5"><a asp-controller="Order" asp-action="Show" asp-route-orderId="@Model.ListOrders[i].OrderId">Add
+                            items to Order - #@Model.ListOrders[i].OrderId</a>  <b><span class="text-muted ml-5">Total Price</span> <span class="color-primary">@Model.ListOrders[i].TotalPrice € </span></b>
+                            @{
+                                if (Model.ListOrders[i].Status == true)
+                                {
+                                    <a class="pt-3 pb-3 ml-5 float-right">Paid</a>
+                                }
+                                else
+                                {
+                                    <button class="btn-primaryc secondary pl-4 pr-4 ml-5 float-right">@Html.ActionLink("Buy","OrderCheckout","CheckoutApi",new
+                                    {id = @Model.ListOrders[i].OrderId})</button>
+                                }
+                            }
+                            </h5>
+                            @* <h6 class="mt-2 color-primary"><b><span class="text-muted">Total Price</span> @Model.ListOrders[i].TotalPrice €</b></h6> *@
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="ml-3 mb-4 p-3 bg-white shadow-sm rounded" style="width: 30%;">
+                            <h6 class="mt-2"><a asp-controller="Order" asp-action="Show" asp-route-orderId="@Model.ListOrders[i].OrderId">Add
+                            items to Order - #@Model.ListOrders[i].OrderId</a>
+                            @{
+                                if (Model.ListOrders[i].Status == true)
+                                {
+                                    <a class="pt-3 pb-3 ml-5">Paid</a>
+                                }
+                                else
+                                {
+                                    <button class="btn-primaryc secondary pl-4 pr-4 ml-5">@Html.ActionLink("Buy","OrderCheckout","CheckoutApi",new
+                                    {id = @Model.ListOrders[i].OrderId})</button>
+                                }
+                            }
+                            </h6>
+                            <h6 class="mt-2 color-primary"><b><span class="text-muted">Total Price</span> @Model.ListOrders[i].TotalPrice €</b></h6>
+                        </div>
+                    }
+                }
+            }
+        </div>
+        @* @foreach (var order in Model.ListOrders)
+        {
+            if (@order.CustomerId == @ViewBag.User)
+            {
+                <div class="ml-2 mb-4 p-3 bg-white shadow-sm rounded" style="width: 30%;">
+                    <h6 class="mt-2"><a asp-controller="Order" asp-action="Show" asp-route-orderId="@order.OrderId">Add
+                    items to Order - #@order.OrderId</a>
+                    @{
+                        if (order.Status == true)
+                        {
+                            <a class="pt-3 pb-3 ml-5">Paid</a>
+                        }
+                        else
+                        {
+                            <button class="btn-primaryc secondary pl-4 pr-4 ml-5">@Html.ActionLink("Buy","OrderCheckout","CheckoutApi",new
+                            {id = @order.OrderId})</button>
+                        }
+                    }
+                    </h6>
+                    <h6 class="mt-2 color-primary"><b><span class="text-muted">Total Price</span> @order.TotalPrice €</b></h6>
+                </div>
+            }
+        } *@
+        
+        @* <table class="table table-hover">
+            <thead>
+                <tr>
+                    @* <th>Id</th> *@
+                    @* <th>Total Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model.ListOrders)
+                {
+                    if (@order.CustomerId == @ViewBag.User)
+                    {
+                        <tr>
+                            <td>
+                                <a asp-controller="Order" asp-action="Show" asp-route-orderId="@order.OrderId">Add items to
+                                    # @order.OrderId</a>
+                            </td>
+                            <td>@order.TotalPrice</td> *@
+                            @* <td>@order.Products.Count()</td> *@
+                            @* @if (order.Status == true)
+                            {
+                                <td>Paid</td>
+                            }
+                            else
+                            {
+                                <td><button class="checkout-btn"
+                            class="btn btn-primary">@Html.ActionLink("Buy","OrderCheckout","CheckoutApi",new {id =
+                            @order.OrderId})</button></td>
+                            }
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table> *@ 
+    </div>
+</div>
